@@ -2,10 +2,20 @@
   "name": "DJRebirth",
   "version": "0.0.0",
   "private": false,
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
+    "build": "gulp",
     "test": "mocha -r jscoverage",
     "send-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/solthoth/DJRebirth.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solthoth/ShoeRunner/issues"
   },
   "dependencies": {
     "body-parser": "^1.12.4",
