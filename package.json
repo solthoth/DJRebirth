@@ -14,5 +14,15 @@
     "jade": "^1.9.2",
     "morgan": "^1.5.3",
     "serve-favicon": "^2.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-mocha": "^2.1.2",
+    "gulp-open": "^0.3.2",
+    "gulp-util": "^3.0.6"
   }
 }
