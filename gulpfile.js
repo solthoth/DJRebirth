@@ -1,11 +1,6 @@
 require('dotenv').load();
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var mocha = require('gulp-mocha');
-var livereload = require('gulp-livereload');
-var gutil = require('gulp-util');
-var connect = require('gulp-connect');
-var open = require('gulp-open');
+var $           = require('gulp-load-plugins')({ lazy: true });
+var gulp        = require('gulp');
 
 var spawn = require('child_process').spawn,
     node;
@@ -13,8 +8,8 @@ var spawn = require('child_process').spawn,
 // Create tasks to execute below
 gulp.task('mocha', function() {
   return gulp.src('tests/**/*.js')
-    .pipe(mocha({ reporter: 'list'}))
-    .on('error', gutil.log);
+    .pipe($.mocha({ reporter: 'list'}))
+    .on('error', console.log);
 });
 
 gulp.task('server', function() {
@@ -29,14 +24,15 @@ gulp.task('server', function() {
 
 gulp.task('jade',function(){
   gulp.src('./views/**')
-    .pipe(connect.reload());
+    .pipe($.connect.reload());
 });
 
 gulp.task('connect',['server'], function(){
-    connect.server({
+    $.connect.server({
       root: '.',
       livereload: true
     });
+    $.livereload.listen();
 });
 
 gulp.task('open',['connect','jade'], function(){
@@ -44,8 +40,7 @@ gulp.task('open',['connect','jade'], function(){
     url: 'http://localhost:'+(process.env.PORT || '3000')
   };
   gulp.src('./gulpfile.js')
-    .pipe(open('',options));
-  livereload.listen();
+    .pipe($.open('',options));
 });
 
 // Execute all tasks here
@@ -53,7 +48,7 @@ gulp.task('default',['mocha'],function(){
   gulp.start('open');
   //watch any files in views/, reload changes
   gulp.watch(['./views/**'],['jade']);
-  gulp.watch(['views/**']).on('change', livereload.changed);
+  gulp.watch(['views/**']).on('change', $.livereload.changed);
 });
 
 //clean up if an error is unhandled
