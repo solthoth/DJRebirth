@@ -32,4 +32,9 @@ router.get('/private-parties', function(req, res, next) {
   res.render('private-parties', { title: 'Private Parties' });
 });
 
+/* GET home page. */
+router.get('/contact-us', function(req, res, next) {
+  res.render('contact-us', { title: 'Contact Us' });
+});
+
 module.exports = router;

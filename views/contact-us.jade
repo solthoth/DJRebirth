@@ -1,0 +1,72 @@
+extends layout
+block headscripts
+  script(type="text/javascript").
+    $(document).ready(function(){
+      $('a[href$="/contact-us"]').parent().addClass("active");
+    });
+block content
+  .jumbotron
+    .container
+      h1 #{title}
+  .container
+    p Please fill out the following form and you will be contacted shortly.
+    form.form-horizontal
+      .form-group
+        label(for="namelabel" class="col-sm-2 control-label") Name:
+        .col-sm-10
+          input(type="text" class="form-control" id="namelabel")
+      .form-group
+        label(for="emaillabel" class="col-sm-2 control-label") Email:
+        .col-sm-10
+          input(type="email" class="form-control" id="emaillabel")
+      .form-group
+        label(for="phonelabel" class="col-sm-2 control-label") Phone:
+        .col-sm-10
+          input(type="tel" class="form-control" id="phonelabel")
+      .form-group
+        label(for="addresslabel" class="col-sm-2 control-label") Address:
+        .col-sm-10
+          input(type="text" class="form-control" id="addresslabel")  
+      .form-group
+        label(for="citylabel" class="col-sm-2 control-label") City / State / Zip:
+        .row
+          .col-xs-4
+            input(type="text" class="form-control" id="citylabel")
+          .col-xs-2
+            input(type="text" class="form-control" id="statelabel")
+          .col-xs-3
+            input(type="text" class="form-control" id="ziplabel")
+      .form-group
+        label(for="eventlabel" class="col-sm-2 control-label") Event Type:
+        .col-sm-10
+          select(class="form-control" id="eventlabel")
+            option Please Make Selection
+            option Wedding
+            option Private Party
+            option Club Event
+            option Corporate Event
+            option School Event
+            option Other
+      .form-group
+        label(for="locationlabel" class="col-sm-2 control-label") Event Location:
+        .col-sm-10
+          input(type="text" class="form-control" id="locationlabel")
+      .form-group
+        label(for="guestlabel" class="col-sm-2 control-label") Number of Guests:
+        .col-sm-10
+          input(type="number" class="form-control" id="guestlabel")
+      .form-group
+        label(for="datelabel" class="col-sm-2 control-label") Event Date:
+        .col-xs-10
+          input(type="date" class="form-control" id="datelabel")
+      .form-group
+        label(for="startendlabel" class="col-sm-2 control-label") Event Times:
+        .row
+          .col-xs-4
+            input(type="time" class="form-control" id="startendlabel")
+          .col-xs-4
+            input(type="time" class="form-control" id="startendlabel")
+      .form-group
+        label(for="messagelabel" class="col-sm-2 control-label") Comments:
+        .col-xs-10
+          textarea(class="form-control" rows="3" id="messagelabel")
