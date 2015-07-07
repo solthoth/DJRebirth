@@ -1,5 +1,9 @@
 extends layout
-
+block headscripts
+  script(type="text/javascript").
+    $(document).ready(function(){
+      $('a[href$="/school-events"]').parent().addClass("active");
+    });
 block content
   h1= title
   p School Events
