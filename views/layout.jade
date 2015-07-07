@@ -24,16 +24,20 @@ html
             img(src="/images/rebirth-entertainment-logo.png" style="height:100%")
         div(id="navbar" class="navbar-collapse collapse")
           ul(class="nav navbar-nav")
-            //li
-            //  a(href="/") Home
+            li
+              a(href="/") Home
             li
               a(href="/vision") Vision
-            li
-              a(href="/weddings") Weddings
-            li
-              a(href="/corporate-events") Corporate Events
-            li
-              a(href="/school-events") School Events
-            li
-              a(href="/private-parties") Private Parties
+            li(class="dropdown")
+              a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Event Types
+                span(class="caret")
+              ul(class="dropdown-menu")
+                li
+                  a(href="/weddings") Weddings
+                li
+                  a(href="/corporate-events") Corporate Events
+                li
+                  a(href="/school-events") School Events
+                li
+                  a(href="/private-parties") Private Parties
     block content
