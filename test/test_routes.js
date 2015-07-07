@@ -50,3 +50,23 @@ describe('GET /school-events', function(){
     });
   });
 });
+
+describe('GET /private-parties', function(){
+  it('should return /private-parties', function(done){
+    request(app).get('/private-parties')
+    .end(function(error, response){
+      if (error) return done(error);
+      done();
+    });
+  });
+});
+
+describe('GET /contact-us', function(){
+  it('should return /contact-us', function(done){
+    request(app).get('/contact-us')
+    .end(function(error, response){
+      if (error) return done(error);
+      done();
+    });
+  });
+});
