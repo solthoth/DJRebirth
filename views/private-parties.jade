@@ -1,0 +1,31 @@
+extends layout
+block headscripts
+  script(type="text/javascript").
+    $(document).ready(function(){
+      $('a[href$="/school-events"]').parent().addClass("active");
+    });
+block content
+  .jumbotron
+    .container
+      h1= title
+  .container
+    .row
+      .col-lg-12
+        p When a group of enthusiastic and passionate people come together, only great things are possible. So why not celebrate aspirations in style?
+        p Whether you're hosting a birthday party, pool party, teen party, private club party, karaoke party, or any other special occasion, Rebirth Entertainment has got you covered!
+        p Choose from any of our available services - pick and match as you like, or let us make a recommendation and do the planning for you!
+    .row
+      .col-lg-12
+        h3 All Services Available
+        ul
+          li 
+            | Online planning through our DJ Intelligence event planning system (
+            a(href="http://www.demo.djintelligence.com/") Live Demo
+            | )
+          li Powerful, and high intensity digital sound.
+          li High quality music (a squeaky clean and HUGE library of over 40,000 songs, from the 1940's to today's hottest house and top 40 hits!)
+          li Dynamic lighting (basic dance, laser, LED, and custom-designed computer-controlled intelligent lighting).
+          li Intelligent (computer-controlled) fog machines to crank up the energy and atmosphere.
+          li HD Video (Music Videos, Live Video) and plasma/LCD screens.
+          li Karaoke (a karaoke library similiar to our music library, with over 50,000 songs spanning from the 1940's to today's most popular music.
+          li Photo Booth
