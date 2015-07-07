@@ -27,4 +27,9 @@ router.get('/school-events', function(req, res, next) {
   res.render('school-events', { title: 'School Events' });
 });
 
+/* GET home page. */
+router.get('/private-parties', function(req, res, next) {
+  res.render('private-parties', { title: 'Private Parties' });
+});
+
 module.exports = router;
