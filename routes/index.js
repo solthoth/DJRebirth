@@ -9,22 +9,22 @@ router.get('/', function(req, res, next) {
 
 /* GET home page. */
 router.get('/vision', function(req, res, next) {
-  res.render('vision', { title: SiteTitle });
+  res.render('vision', { title: 'Our Vision' });
 });
 
 /* GET home page. */
 router.get('/weddings', function(req, res, next) {
-  res.render('weddings', { title: SiteTitle });
+  res.render('weddings', { title: 'Weddings' });
 });
 
 /* GET home page. */
 router.get('/corporate-events', function(req, res, next) {
-  res.render('corporate-events', { title: SiteTitle });
+  res.render('corporate-events', { title: 'Corporate Events' });
 });
 
 /* GET home page. */
 router.get('/school-events', function(req, res, next) {
-  res.render('school-events', { title: SiteTitle });
+  res.render('school-events', { title: 'School Events' });
 });
 
 module.exports = router;
