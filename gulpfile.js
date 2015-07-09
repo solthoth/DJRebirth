@@ -7,7 +7,7 @@ var spawn = require('child_process').spawn,
 
 // Create tasks to execute below
 gulp.task('mocha', function() {
-  return gulp.src('tests/**/*.js')
+  return gulp.src('test/**/*.js')
     .pipe($.mocha({ reporter: 'list'}))
     .on('error', console.log);
 });
