@@ -3,14 +3,47 @@ block headscripts
   script(type="text/javascript").
     $(document).ready(function(){
       $('a[href$="/"]').parent().addClass("active");
+      for(var i=1; i<25; i++) {
+        $("div.carousel-inner").append(
+          '<div class="item">'
+          +'<center>'
+          +'<img style="height:200px" src="http://www.rebirthentertainment.com/images/carousel/rebirth-entertainment-carousel-'+i.toString()+'.jpg" />'
+          +'</center>'
+          +'</div>'
+        );
+      }
+      $(".item:first").addClass("active");
+      $('.carousel').carousel({
+        interval: 5000
+      });
     });
 block content
-  //img(src="/images/rebirth-entertainment-logo.png")
-  div.jumbotron
-    .container
-      h1 #{title}
-      p Rebirth Entertainment is a professional mobile disc jockey / DJ / VJ / KJ / Photo Booth entertainment service in San Diego county, serving Southern California and surrounding areas.
+  br
+  br
   .container
+    .row
+      .page-header
+        //h1 #{title}
+        img(src="/images/rebirth-entertainment-logo.png")
+        p Rebirth Entertainment is a professional mobile disc jockey / DJ / VJ / KJ / Photo Booth entertainment service in San Diego county, serving Southern California and surrounding areas.
+    .row
+      div(class="carousel slide" data-ride="carousel" id="NightPics")
+        // Indicators
+        //ol.carousel-indicators
+          li(data-target="#NightPics" data-slide-to="0" class="active")
+          li(data-target="#NightPics" data-slide-to="1")
+          li(data-target="#NightPics" data-slide-to="2")
+        // Wrapper for slides
+        div(class="carousel-inner" role="listbox")
+          
+        // Controls
+        
+        a(class="left carousel-control" href="#NightPics" role="button" data-slide="prev")
+          span(class="glyphicon glyphicon-chevron-left" aria-hidden="true")
+          span(class="sr-only") Previous
+        a(class="right carousel-control" href="#NightPics" role="button" data-slide="next")
+          span(class="glyphicon glyphicon-chevron-right" aria-hidden="true")
+          span(class="sr-only") Next
     .row
       .col-md-4.col-sm-6
         h2 Professional
