@@ -22,8 +22,13 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('jade',function(){
+gulp.task('jade',['styles'],function(){
   gulp.src('./views/**')
+    .pipe($.connect.reload());
+});
+
+gulp.task('styles',function(){
+  gulp.src('./stylesheets/**')
     .pipe($.connect.reload());
 });
 
