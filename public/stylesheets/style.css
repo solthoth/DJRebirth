@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.footer {
+  height: 30%;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
