@@ -28,14 +28,64 @@ block content
         .col-sm-10
           input(type="text" class="form-control" id="addresslabel")  
       .form-group
-        label(for="citylabel" class="col-sm-2 control-label") City / State / Zip:
-        .row
-          .col-xs-4
-            input(type="text" class="form-control" id="citylabel")
-          .col-xs-2
-            input(type="text" class="form-control" id="statelabel")
-          .col-xs-3
-            input(type="text" class="form-control" id="ziplabel")
+        label(for="citylabel" class="col-sm-2 col-xs-12 control-label") City / State / Zip:
+        .col-sm-5.col-xs-12
+          input(type="text" class="form-control" id="citylabel")
+        .col-sm-2.col-xs-4
+          select(class="form-control" id="citylabel")
+            option(value="AL") Alabama
+            option(value="AK") Alaska
+            option(value="AZ") Arizona
+            option(value="AR") Arkansas
+            option(value="CA" selected="selected") California
+            option(value="CO") Colorado
+            option(value="CT") Connecticut
+            option(value="DE") Delaware
+            option(value="DC") District Of Columbia
+            option(value="FL") Florida
+            option(value="GA") Georgia
+            option(value="HI") Hawaii
+            option(value="ID") Idaho
+            option(value="IL") Illinois
+            option(value="IN") Indiana
+            option(value="IA") Iowa
+            option(value="KS") Kansas
+            option(value="KY") Kentucky
+            option(value="LA") Louisiana
+            option(value="ME") Maine
+            option(value="MD") Maryland
+            option(value="MA") Massachusetts
+            option(value="MI") Michigan
+            option(value="MN") Minnesota
+            option(value="MS") Mississippi
+            option(value="MO") Missouri
+            option(value="MT") Montana
+            option(value="NE") Nebraska
+            option(value="NV") Nevada
+            option(value="NH") New Hampshire
+            option(value="NJ") New Jersey
+            option(value="NM") New Mexico
+            option(value="NY") New York
+            option(value="NC") North Carolina
+            option(value="ND") North Dakota
+            option(value="OH") Ohio
+            option(value="OK") Oklahoma
+            option(value="OR") Oregon
+            option(value="PA") Pennsylvania
+            option(value="RI") Rhode Island
+            option(value="SC") South Carolina
+            option(value="SD") South Dakota
+            option(value="TN") Tennessee
+            option(value="TX") Texas
+            option(value="UT") Utah
+            option(value="VT") Vermont
+            option(value="VA") Virginia
+            option(value="WA") Washington
+            option(value="WV") West Virginia
+            option(value="WI") Wisconsin
+            option(value="WY") Wyoming
+        .col-sm-3.col-xs-8
+          input(type="text" class="form-control" id="ziplabel")
       .form-group
         label(for="eventlabel" class="col-sm-2 control-label") Event Type:
         .col-sm-10
@@ -53,20 +103,20 @@ block content
           input(type="text" class="form-control" id="locationlabel")
       .form-group
         label(for="guestlabel" class="col-sm-2 control-label") Number of Guests:
-        .col-sm-10
+        .col-sm-6
           input(type="number" class="form-control" id="guestlabel")
       .form-group
-        label(for="datelabel" class="col-sm-2 control-label") Event Date:
-        .col-xs-10
+        label(for="datelabel" class="col-sm-2 col-xs-12 control-label") Event Date :
+        .col-sm-6.col-xs-12
           input(type="date" class="form-control" id="datelabel")
       .form-group
-        label(for="startendlabel" class="col-sm-2 control-label") Event Times:
-        .row
-          .col-xs-4
-            input(type="time" class="form-control" id="startendlabel")
-          .col-xs-4
-            input(type="time" class="form-control" id="startendlabel")
+        label(for="startlabel" class="col-sm-2 col-xs-12 control-label") Event Start / End:
+        .col-md-4.col-sm-5.col-xs-12
+          input(type="time" class="form-control" id="startlabel")
+        .col-md-4.col-sm-5.col-xs-12
+          input(type="time" class="form-control" id="endlabel")
       .form-group
         label(for="messagelabel" class="col-sm-2 control-label") Comments:
-        .col-xs-10
+        .col-sm-10
           textarea(class="form-control" rows="3" id="messagelabel")
+      button(type="submit" class="btn btn-primary btn-block") Submit
